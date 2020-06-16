@@ -8,8 +8,11 @@ export default function Projects() {
       <Head>
         <title>Laura Jiang | Projects </title>
       </Head>
-
-      <main>test</main>
+      <a id="projects" />
+      <main>
+        {" "}
+        <h2 className="small-title">projects</h2>
+      </main>
 
       <style jsx>{`
         .container {
@@ -55,6 +58,12 @@ export default function Projects() {
         .title,
         .description {
           text-align: center;
+        }
+
+        .small-title {
+          margin: 0;
+          line-height: 1.15;
+          font-size: 3rem;
         }
 
         .description {

@@ -1,9 +1,42 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import Typist from "react-typist";
 import Link from "next/link";
+import Button from "@material-ui/core/Button";
 import ArrowDownwardSharpIcon from "@material-ui/icons/ArrowDownwardSharp";
+import {
+  Link as ScrollLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 export default function Landing() {
+  useEffect(() => {
+    Events.scrollEvent.register("begin", function () {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register("end", function () {
+      console.log("end", arguments);
+    });
+
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
+  const scrollToElement = (element_name: string) => {
+    scroller.scrollTo(element_name, {
+      duration: 1200,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
+  };
+
   return (
     <div className="container">
       <Head>
@@ -16,17 +49,18 @@ export default function Landing() {
           senior @ oregon state university
         </Typist>
         <p className="description">
-          <Link href="/about">
-            <a className="hvr-bob">about</a>
-          </Link>{" "}
+          <a className="hvr-bob" onClick={() => scrollToElement("about")}>
+            about
+          </a>{" "}
           /{" "}
-          <Link href="/projects">
-            <a className="hvr-bob"> projects </a>
-          </Link>{" "}
+          <a className="hvr-bob" onClick={() => scrollToElement("projects")}>
+            {" "}
+            projects{" "}
+          </a>{" "}
           /{" "}
-          <Link href="/experience">
-            <a className="hvr-bob">experience</a>
-          </Link>
+          <a className="hvr-bob" onClick={() => scrollToElement("experience")}>
+            experience
+          </a>
         </p>
         <p className="description">
           <a href="https://www.linkedin.com/in/laura-jiang/">
@@ -38,7 +72,9 @@ export default function Landing() {
         </p>
         <footer className="scroll-arrow">
           <a className="hvr-bob">
-            <ArrowDownwardSharpIcon />
+            <ArrowDownwardSharpIcon
+              onClick={() => scroll.scrollTo(window.screen.availHeight)}
+            />
           </a>
         </footer>
       </main>

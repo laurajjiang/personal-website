@@ -8,8 +8,11 @@ export default function Experience() {
       <Head>
         <title>Laura Jiang | Experience </title>
       </Head>
-
-      <main>exp</main>
+      <a id="experience" />
+      <main>
+        {" "}
+        <h2 className="small-title">experience</h2>
+      </main>
 
       <style jsx>{`
         .container {
@@ -55,6 +58,12 @@ export default function Experience() {
         .title,
         .description {
           text-align: center;
+        }
+
+        .small-title {
+          margin: 0;
+          line-height: 1.15;
+          font-size: 3rem;
         }
 
         .description {

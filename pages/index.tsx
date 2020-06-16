@@ -66,7 +66,7 @@ export default function Home() {
         return (
           <div>
             <Fade top>
-              <Page name={idx} />
+              <Page />
               {idx === "home" ? (
                 <span />
               ) : (
@@ -78,6 +78,21 @@ export default function Home() {
           </div>
         );
       })}
+
+      <style jsx>{`
+        .fadeOut {
+          opacity: 0;
+          width: 0;
+          height: 0;
+          transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+        }
+        .fadeIn {
+          opacity: 1;
+          width: 100px;
+          height: 100px;
+          transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+        }
+      `}</style>
 
       <style jsx global>{`
         html,
