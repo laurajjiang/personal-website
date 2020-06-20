@@ -1,17 +1,40 @@
 import Head from "next/head";
-import Typist from "react-typist";
-import Link from "next/link";
 
 export default function Projects() {
   return (
     <div className="container">
       <Head>
-        <title>Laura Jiang | Projects </title>
+        <title>Laura Jiang</title>
       </Head>
       <a id="projects" />
       <main>
-        {" "}
         <h2 className="small-title">projects</h2>
+        <div className="grid">
+          <div className="card">
+            <h3>extension generator (ongoing)</h3>
+            <p>
+              a command-line based tool that builds a template for different
+              extensions that can be developed for Azure Data Studio (ADS)
+            </p>
+          </div>
+          <div className="card">
+            <h3>placeholder - new</h3>
+            <p>description</p>
+          </div>
+          <div className="card">
+            <h3>placeholder - new</h3>
+            <p>description</p>
+          </div>
+          <div className="card">
+            <a href="https://github.com/laurajjiang/recipe-builder">
+              <h3>recipe builder</h3>
+              <p>
+                a full-stack web application built using MySQL, Express, React,
+                and NodeJS
+              </p>
+            </a>
+          </div>
+        </div>
       </main>
 
       <style jsx>{`
@@ -38,28 +61,6 @@ export default function Projects() {
           text-decoration: none;
         }
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
         .small-title {
           margin: 0;
           line-height: 1.15;
@@ -84,20 +85,32 @@ export default function Projects() {
         a:hover,
         a:focus,
         a:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #c397bb;
+          border-color: #c397bb;
         }
 
         .card {
           margin: 1rem;
           flex-basis: 45%;
           padding: 1.5rem;
-          text-align: left;
+          text-align: center;
           color: inherit;
-          text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .card:hover,
+        .card:focus,
+        .card:active {
+          color: #c397bb;
+          border-color: #c397bb;
+        }
+
+        .card p {
+          margin: 0;
+          font-size: 1.25rem;
+          line-height: 1.5;
         }
 
         @media (max-width: 600px) {

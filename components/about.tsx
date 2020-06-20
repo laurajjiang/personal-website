@@ -1,13 +1,10 @@
 import Head from "next/head";
-import Typist from "react-typist";
-import Link from "next/link";
-import { Card } from "@material-ui/core";
 
 export default function About() {
   return (
     <div className="container">
       <Head>
-        <title>Laura Jiang | About </title>
+        <title>Laura Jiang</title>
       </Head>
       <a id="about" />
       <main>
@@ -22,12 +19,6 @@ export default function About() {
           <br />
           my interests include:
         </p>
-        <div className="grid">
-          <div className="card">placeholder </div>
-          <div className="card">placeholder</div>
-          <div className="card">placeholder</div>
-          <div className="card">placeholder</div>
-        </div>
       </main>
 
       <style jsx>{`

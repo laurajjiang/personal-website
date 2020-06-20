@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useState, useEffect, SyntheticEvent } from "react";
 import Landing from "../components/landing";
 import About from "../components/about";
+import Nav from "../components/nav";
 import Experience from "../components/experience";
 import Projects from "../components/projects";
-import * as Scroll from "react-scroll";
 import { IconButton } from "@material-ui/core";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import config from "react-reveal/globals";
@@ -27,7 +27,16 @@ const items = {
 config({ ssrFadeout: true });
 
 export default function Home() {
+  const [currentScrollHeight, setScrollHeight] = useState(0);
+
   useEffect(() => {
+    window.onscroll = () => {
+      const newScrollHeight = Math.ceil(window.scrollY / 50) * 50;
+      if (currentScrollHeight != newScrollHeight) {
+        setScrollHeight(newScrollHeight);
+      }
+    };
+
     Events.scrollEvent.register("begin", function () {
       console.log("begin", arguments);
     });
@@ -50,10 +59,6 @@ export default function Home() {
     });
   };
 
-  const scrollDownSize = (size: number) => {
-    scroller;
-  };
-
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -67,14 +72,14 @@ export default function Home() {
           <div>
             <Fade top>
               <Page />
-              {idx === "home" ? (
-                <span />
-              ) : (
-                <IconButton onClick={scrollToTop} aria-label="back to top">
-                  <ArrowUpwardIcon />
-                </IconButton>
-              )}
             </Fade>
+            {idx === "home" ? (
+              <span />
+            ) : (
+              <IconButton onClick={scrollToTop} aria-label="back to top">
+                <ArrowUpwardIcon />
+              </IconButton>
+            )}
           </div>
         );
       })}

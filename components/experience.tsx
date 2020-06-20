@@ -1,16 +1,13 @@
 import Head from "next/head";
-import Typist from "react-typist";
-import Link from "next/link";
 
 export default function Experience() {
   return (
     <div className="container">
       <Head>
-        <title>Laura Jiang | Experience </title>
+        <title>Laura Jiang</title>
       </Head>
       <a id="experience" />
       <main>
-        {" "}
         <h2 className="small-title">experience</h2>
       </main>
 
