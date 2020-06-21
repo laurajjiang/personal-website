@@ -17,7 +17,7 @@ export default function About() {
           full-stack development but i am open to other opportunities as well.{" "}
           <br />
           <br />
-          my interests include:
+          my interests include project management, cybersecurity,
         </p>
       </main>
 

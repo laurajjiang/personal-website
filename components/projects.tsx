@@ -1,6 +1,20 @@
 import Head from "next/head";
+import Chip from "@material-ui/core/Chip";
+import { useEffect } from "react";
 
 export default function Projects() {
+  let chips = [];
+
+  const extensionLabels = ["project management", "typescript", "open source"];
+
+  const buildLabels = (labels: Array<string>) => {
+    labels.forEach((item, i) => chips.push(<Chip label={item} />));
+  };
+
+  useEffect(() => {
+    buildLabels;
+  }, []);
+
   return (
     <div className="container">
       <Head>
@@ -16,6 +30,8 @@ export default function Projects() {
               a command-line based tool that builds a template for different
               extensions that can be developed for Azure Data Studio (ADS)
             </p>
+            <br />
+            {chips}
           </div>
           <div className="card">
             <h3>placeholder - new</h3>
