@@ -64,7 +64,7 @@ export default function Home() {
   };
 
   return (
-    <div className="container">
+    <div className='container'>
       {Object.keys(items).map((idx, item) => {
         const Page = items[idx];
         console.log(idx);
@@ -76,7 +76,10 @@ export default function Home() {
             {idx === "home" ? (
               <span />
             ) : (
-              <IconButton onClick={scrollToTop} aria-label="back to top">
+              <IconButton
+                className='arrow'
+                onClick={scrollToTop}
+                aria-label='back to top'>
                 <ArrowUpwardIcon />
               </IconButton>
             )}
@@ -100,6 +103,17 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
+        .arrow {
+          display: flex;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          bottom: 0;
+          justify-content: center;
+          align-items: center;
+        }
+
         html,
         body {
           padding: 0;

@@ -1,14 +1,27 @@
 import Head from "next/head";
+import { Document, Page, pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 export default function Experience() {
   return (
-    <div className="container">
+    <div className='container'>
       <Head>
         <title>Laura Jiang</title>
       </Head>
-      <a id="experience" />
+      <a id='experience' />
       <main>
-        <h2 className="small-title">experience</h2>
+        <h2 className='small-title'>experience</h2>
+        {/* <h3>download my resume</h3> */}
+        {/* <Document file='%PUBLIC_URL%/resume.pdf'>
+          <Page pageNumber={1} />
+        </Document> */}
+        <a
+          href='https://drive.google.com/file/d/1FPvga_-CW60bwt-ifa0Jdik8DxYugkZH/view?usp=sharing'
+          download>
+          <div className='card'>
+            <h3>view my resume</h3>
+          </div>
+        </a>
       </main>
 
       <style jsx>{`
@@ -81,20 +94,34 @@ export default function Experience() {
         a:hover,
         a:focus,
         a:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #c397bb;
+          border-color: #c397bb;
         }
 
         .card {
-          margin: 1rem;
+          margin: 2rem;
           flex-basis: 45%;
-          padding: 1.5rem;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
           text-align: left;
           color: inherit;
           text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .card:hover,
+        .card:focus,
+        .card:active {
+          color: #c397bb;
+          border-color: #c397bb;
+        }
+
+        .card p {
+          margin: 0;
+          font-size: 1.25rem;
+          line-height: 1.5;
         }
 
         @media (max-width: 600px) {

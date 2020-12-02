@@ -16,33 +16,43 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="container">
+    <div className='container'>
       <Head>
         <title>Laura Jiang</title>
       </Head>
-      <a id="projects" />
+      <a id='projects' />
       <main>
-        <h2 className="small-title">projects</h2>
-        <div className="grid">
-          <div className="card">
-            <h3>extension generator (ongoing)</h3>
+        <h2 className='small-title'>projects</h2>
+        <div className='grid'>
+          <div className='card'>
+            <h3>interview preparation</h3>
             <p>
-              a command-line based tool that builds a template for different
-              extensions that can be developed for Azure Data Studio (ADS)
+              tool to set up oregon state students with peer mock interviews to
+              hone skills and gain interview experience
             </p>
             <br />
-            {chips}
           </div>
-          <div className="card">
-            <h3>placeholder - new</h3>
-            <p>description</p>
+          <div className='card'>
+            <a href='https://github.com/laurajjiang/capstone_ai_education'>
+              <h3>capstone - interactive visualization for ai education</h3>
+              <p>
+                a site to educate users on machine learning classification
+                (sentiment, image) with visualizations, text content, and
+                in-line code
+              </p>
+            </a>
           </div>
-          <div className="card">
-            <h3>placeholder - new</h3>
-            <p>description</p>
+          <div className='card'>
+            <a href='https://github.com/llali/generator-azuredatastudio'>
+              <h3>extension generator</h3>
+              <p>
+                a command-line based tool that builds a template for different
+                extensions that can be developed for Azure Data Studio (ADS)
+              </p>
+            </a>
           </div>
-          <div className="card">
-            <a href="https://github.com/laurajjiang/recipe-builder">
+          <div className='card'>
+            <a href='https://github.com/laurajjiang/recipe-builder'>
               <h3>recipe builder</h3>
               <p>
                 a full-stack web application built using MySQL, Express, React,

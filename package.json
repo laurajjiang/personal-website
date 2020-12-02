@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "copy-pdfjs-worker" : "cp ./node_modules/pdfjs-dist/build/pdf.worker.js public/scripts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -13,6 +14,7 @@
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-pdf": "^5.0.0",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.16",
     "react-typist": "^2.0.5",

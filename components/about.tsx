@@ -10,14 +10,15 @@ export default function About() {
       <main>
         <h2 className="small-title">about</h2>
         <p className="description">
-          hi! i'm laura, a senior majoring in computer science with a
-          specialization in mobile and cloud application development. <br /> i
-          am seeking full-time, new graduate software engineering roles
-          (starting june 2021). <br /> i am most interested in back-end or
-          full-stack development but i am open to other opportunities as well.{" "}
+          hi! i'm laura, a senior majoring in computer science at oregon state with
+          specialization in mobile/cloud application development and a splash of security. 
+          <br /> 
+          <br />
+          i'll be a product manager @ microsoft starting june 2021. 
           <br />
           <br />
-          my interests include project management, cybersecurity,
+          interested in mentorship and supporting students & those early in career! also looking for opportunities
+          to get involved in d&i work and speaking opportunities.
         </p>
       </main>
 
@@ -53,6 +54,7 @@ export default function About() {
 
         .description {
           text-align: center;
+          max-width: 50%;
         }
 
         .description {

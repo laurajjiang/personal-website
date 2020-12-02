@@ -1,17 +1,8 @@
 import { useEffect } from "react";
 import Head from "next/head";
 import Typist from "react-typist";
-import Link from "next/link";
-import Button from "@material-ui/core/Button";
 import ArrowDownwardSharpIcon from "@material-ui/icons/ArrowDownwardSharp";
-import {
-  Link as ScrollLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link, Events, animateScroll as scroll, scroller } from "react-scroll";
 
 export default function Landing() {
   useEffect(() => {
@@ -38,40 +29,40 @@ export default function Landing() {
   };
 
   return (
-    <div className="container">
+    <div className='container'>
       <Head>
         <title>Laura Jiang</title>
       </Head>
 
       <main>
-        <h1 className="title">laura jiang</h1>
+        <h1 className='title'>laura jiang</h1>
         <Typist startDelay={300} cursor={{ hideWhenDone: true }}>
-          senior @ oregon state university
+          senior @ oregon state university, incoming PM @ microsoft
         </Typist>
-        <p className="description">
-          <a className="hvr-bob" onClick={() => scrollToElement("about")}>
+        <p className='description'>
+          <a className='hvr-bob' onClick={() => scrollToElement("about")}>
             about
           </a>{" "}
           /{" "}
-          <a className="hvr-bob" onClick={() => scrollToElement("projects")}>
+          <a className='hvr-bob' onClick={() => scrollToElement("projects")}>
             {" "}
             projects{" "}
           </a>{" "}
           /{" "}
-          <a className="hvr-bob" onClick={() => scrollToElement("experience")}>
+          <a className='hvr-bob' onClick={() => scrollToElement("experience")}>
             experience
           </a>
         </p>
-        <p className="description">
-          <a href="https://www.linkedin.com/in/laura-jiang/">
-            <img src="/linkedin.jpeg" />
+        <p className='description'>
+          <a href='https://www.linkedin.com/in/laura-jiang/'>
+            <img src='/linkedin.jpeg' />
           </a>
-          <a href="https://github.com/laurajjiang">
-            <img src="/github.jpeg" />
+          <a href='https://github.com/laurajjiang'>
+            <img src='/github.jpeg' />
           </a>
         </p>
-        <footer className="scroll-arrow">
-          <a className="hvr-bob">
+        <footer className='scroll-arrow'>
+          <a className='hvr-bob'>
             <ArrowDownwardSharpIcon
               onClick={() => scroll.scrollTo(window.screen.availHeight)}
             />
