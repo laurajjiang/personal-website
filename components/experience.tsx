@@ -11,10 +11,7 @@ export default function Experience() {
       <a id='experience' />
       <main>
         <h2 className='small-title'>experience</h2>
-        {/* <h3>download my resume</h3> */}
-        {/* <Document file='%PUBLIC_URL%/resume.pdf'>
-          <Page pageNumber={1} />
-        </Document> */}
+
         <a
           href='https://drive.google.com/file/d/1FPvga_-CW60bwt-ifa0Jdik8DxYugkZH/view?usp=sharing'
           download>
